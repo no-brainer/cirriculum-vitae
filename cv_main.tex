@@ -1,0 +1,116 @@
+\documentclass[11pt, a4paper, sans]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{green}
+\nopagenumbers{}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+
+\usepackage{import}
+
+\name{Polina}{Guseva}
+%\title{Cirriculum Vitae}
+
+\newcommand*{\customcventry}[7][.25em]{
+    \begin{tabular}{@{}l}
+        {\bfseries #4}
+    \end{tabular}
+    \hfill
+    \begin{tabular}{l@{}}
+        {\bfseries #5}
+    \end{tabular} \\
+    \begin{tabular}{@{}l}
+        {\itshape #3}
+    \end{tabular}
+    \hfill
+    \begin{tabular}{l@{}}
+        {\itshape #2}
+    \end{tabular}
+    \ifx&#7&
+    \else{\\
+    \begin{minipage}{\maincolumnwidth}
+        \small#7
+    \end{minipage}}\fi
+    \par\addvspace{#1}
+}
+
+\setlength{\tabcolsep}{12pt}
+
+\begin{document}
+    \makecvtitle
+    \vspace*{-20mm}
+
+    \begin{center}
+        \begin{tabular}{ c c c c }
+            \faEnvelopeO\enspace p.guseva00@gmail.com & \faGithub\enspace no-brainer & \faMobile\enspace +7 (905) 588-08-48 \\
+        \end{tabular}
+    \end{center}
+
+    \section{Education}{
+        \customcventry{2018-2022}{BS in Applied Mathematics and Computer Science}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{}{
+            \underline{\normalsize Relevant courses:}
+
+            \begin{cvcolumns}
+                \cvcolumn{}{
+                    \begin{itemize}
+                        \item Algorithms and Data Structures
+                        \item C++ programming
+                    \end{itemize}
+                }
+                \cvcolumn{}{
+                    \begin{itemize}
+                        \item Linear algebra
+                        \item Python programming
+                    \end{itemize}
+                }
+            \end{cvcolumns}
+        }
+    }
+
+    \section{Experience}{
+        \customcventry{Summer 2019}{Software Engineering Intern}{Yandex}{Moscow, Russia}{}{
+            \begin{itemize}
+              \item Added iOS support to mobile app signing and distribution service with Django, Fastlane and Ruby scripts
+              \item Decreased app approval time by two days by automatic assignment of reviewers for various application checks
+            \end{itemize}
+        }
+    }
+
+    \section{Key Skills}{
+        \cvitem{Programming Languages}{C/C++, Python, SQL, Rust}
+        \cvitem{Frameworks}{Django}
+        \cvitem{Utilities}{Git, Docker}
+        \cvitem{Languages}{Russian (Native), English (Upper Intermediate), French (Beginner)}
+        \cvitem{Other}{Linux, \LaTeX}
+    }
+
+    \section{Achievements and Awards}{
+        \cvitem{2018}{1st degree award in "Lomonosov" olympiad in Mathematics}
+        \cvitem{2018}{Prizewinner of Regional Level of Russian National Olympiad in Informatics}
+        \cvitem{2017}{Prizewinner of Regional Level of Russian National Olympiad in Mathematics}
+        \cvitem{2017}{3rd degree award in Interregional Olympiad in Informatics and Computer Security}
+    }
+
+    \section{Main Interests}{
+        \begin{cvcolumns}
+            \cvcolumn{}{
+                \begin{itemize}
+                    \item Competitive programming
+                    \item Compiler design
+                \end{itemize}
+            }
+            \cvcolumn{}{
+                \begin{itemize}
+                    \item Graph Theory
+                    \item Combinatorics
+                \end{itemize}
+            }
+        \end{cvcolumns}
+    }
+\end{document}
