@@ -17,7 +17,7 @@
 \name{Polina}{Guseva}
 %\title{Cirriculum Vitae}
 
-\newcommand*{\customcventry}[7][.25em]{
+\newcommand*{\customcventry}[7][.1em]{
     \begin{tabular}{@{}l}
         {\bfseries #4}
     \end{tabular}
@@ -40,7 +40,7 @@
     \par\addvspace{#1}
 }
 
-\setlength{\tabcolsep}{12pt}
+\setlength{\tabcolsep}{10pt}
 
 \begin{document}
     \makecvtitle
@@ -53,76 +53,94 @@
     \end{center}
 
     \section{Education}{
-        \customcventry{2018 -- 2022}{Bachelor of Science in Applied Mathematics and Computer Science. 3.54/4.33 GPA}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{}{
+        \customcventry{2018 -- 2022}{Bachelor of Science in Applied Mathematics and Computer Science. 8.34/10 GPA}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{}{
             \underline{\normalsize Relevant courses:}
 
             \begin{cvcolumns}
-                \cvcolumn{}{
+                \cvcolumn{}{\small
                     \begin{itemize}
-                        \item Algorithms and Data Structures
+                        \item Algorithms and data structures
                         \item C++ programming
+                        \item Computer architecture and operating systems
                     \end{itemize}
                 }
-                \cvcolumn{}{
+                \cvcolumn{}{\small
                     \begin{itemize}
                         \item Linear algebra
                         \item Python programming
+                        \item Differential equations
                     \end{itemize}
                 }
             \end{cvcolumns}
         }
     }
-
-    \section{Experience}{
+    \vspace{-0.75cm}
+    \section{Work experience}{
         \customcventry{Summer 2019}{Software Engineering Intern}{Yandex}{Moscow, Russia}{}{
             \begin{itemize}
-              \item Built Web API for signing and publishing service for iOS Development teams by teaching myself Ruby and Django REST to automate signing applications with correct company certificates, uploading multiple builds to TestFlight at once, and publish fully tested versions to AppStore. Service development was on pause, but I drove MVP to completion and project was launched company-wide after my internship ended.
+                \item Built Web API for signing and publishing iOS applications by teaching myself Ruby and Django REST
+                \item Implemented automatic signing of an application with the correct company certificate, bulk uploading to TestFlight, and publishing of fully-tested versions
             \end{itemize}
         }
-        \customcventry{October 2019 -- June 2020}{Teaching Assistant for the Algorithms and Data Structures course}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{
+        \customcventry{October 2019 -- March 2020}{Teaching Assistant for the Algorithms and the Discrete maths courses}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{
             \begin{itemize}
-                \item Reviewed code in thematic contests and graded theoretical exercises and homeworks.
+                \item Mentored over 30 students and led weekly study sessions
+                \item Graded homeworks and reviewed code in thematic contests
             \end{itemize}
         }
     }
-
-    % \section{Relevant Projects}{
-    % TODO
-    % }
-
+    \vspace{-0.25cm}
+    \section{Relevant Projects}{
+        \customcventry{2019 - Now}{An EduTech startup that helps schoolchildren improve soft skills in an engaging way}{Focus}{Moscow, Russia}{}{}{
+            \begin{itemize} \small
+                \item Developed a mobile application for Android and iOS with C\# and Xamarin
+                \item Built a RESTful API for applications with Flask, PostgreSQL, and Amazon S3 and deployed it to Heroku
+                \item Supervised frontend development
+            \end{itemize}
+        }
+        \customcventry{December 2019 - May 2020}{An university project}{Fine motor movements classification}{Moscow, Russia}{}{}{
+            \begin{itemize} \small
+                \item Developed an Android app in Kotlin for data collection and labeling
+                \item Built an Android app in Kotlin for real-time classifying fine motor movements
+                \item Developed movement reconstruction app with Python and Processing
+            \end{itemize}
+        }
+    }
+    \vspace{-0.25cm}
     \section{Relevant Activities}{
-        \customcventry{2019 -- 2021}{Evening Data Science and Data Engineering school}{Ozon Masters}{Moscow, Russia}{}{}{
-            \underline{\normalsize Relevant courses:}
+%        \customcventry{2019 -- 2021}{Selective Data Science and Data Engineering school}{Ozon Masters}{Moscow, Russia}{}{}{
+%            \underline{\normalsize Relevant courses:}
+%
+%            \begin{cvcolumns}
+%                \cvcolumn{}{
+%                    \begin{itemize}
+%                        \item Computational Linear Algebra
+%                        \item Big Data and Data Engineering Basics
+%                    \end{itemize}
+%                }
+%                \cvcolumn{}{
+%                    \begin{itemize}
+%                        \item Machine Learning Basics
+%                    \end{itemize}
+%                }
+%            \end{cvcolumns}
+%        }
 
-            \begin{cvcolumns}
-                \cvcolumn{}{
-                    \begin{itemize}
-                        \item Computational Linear Algebra
-                        \item Big Data and Data Engineering Basics
-                    \end{itemize}
-                }
-                \cvcolumn{}{
-                    \begin{itemize}
-                        \item Machine Learning Basics
-                    \end{itemize}
-                }
-            \end{cvcolumns}
-        }
-
-        \customcventry{November 2019}{Participant of state-of-the-art scientific research school by Yandex}{Educational Centre "Sirius"}{Sochi, Russia}{}{
+        \customcventry{November 2019}{Participant of state-of-the-art scientific research school by Yandex}{Educational Center "Sirius"}{Sochi, Russia}{}{
             \begin{itemize}
-                \item Implemented a simplified version of Amazon Aurora database with PostgreSQL compatibility. My area of responsibility was communication between database nodes and caching. I had to learn asynchronous programming in C to complete this project.
+                \item Worked on a simplified version of Amazon Aurora database with PostgreSQL compatibility
+                \item Implemented communication between database nodes and caching in C89 with asynchronous programming
             \end{itemize}
         }
     }
-
+    \vspace{-0.25cm}
     \section{Key Skills}{
-        \cvitem{Programming Languages}{C/C++, Python, SQL, Ruby/Rails}
-        \cvitem{Frameworks}{Django}
-        \cvitem{Utilities}{Git, Docker}
+        \cvitem{Programming Languages}{C++/C/C\#, Python, SQL, Kotlin, Ruby/Rails, Clojure}
+        \cvitem{Frameworks}{Django, Flask, Xamarin}
+        \cvitem{Utilities}{Git, Docker, Heroku}
         \cvitem{Languages}{Russian (Native), English (Upper Intermediate)}
     }
-
+    \vspace{-0.25cm}
     \section{Achievements and Awards}{
         \cvitem{2018}{1st degree award in "Lomonosov" olympiad in Mathematics (over 3000 participants overall)}
         \cvitem{2018}{Prizewinner of Regional Level of Russian National Olympiad in Informatics}
