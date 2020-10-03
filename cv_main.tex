@@ -14,8 +14,14 @@
 
 \usepackage{import}
 
+%\geometry{
+% a4paper,
+% total={170mm,257mm},
+% left=20mm,
+% top=10mm,
+%}
 \name{Polina}{Guseva}
-%\title{Cirriculum Vitae}
+\title{CV}
 
 \newcommand*{\customcventry}[7][.1em]{
     \begin{tabular}{@{}l}
@@ -35,7 +41,23 @@
     \ifx&#7&
     \else{\\
     \begin{minipage}{\maincolumnwidth}
-        \small#7
+        #7
+    \end{minipage}}\fi
+    \par\addvspace{#1}
+}
+
+\newcommand*{\projcventry}[4][.1em]{
+    \begin{tabular}{@{}l}
+        {\bfseries #2}
+    \end{tabular}
+    \hfill
+    \begin{tabular}{l@{}}
+        {\itshape #3}
+    \end{tabular} \\
+    \ifx&#4&
+    \else{
+    \begin{minipage}{\maincolumnwidth}
+        #4
     \end{minipage}}\fi
     \par\addvspace{#1}
 }
@@ -47,28 +69,30 @@
     \vspace*{-15mm}
 
     \begin{center}
-        \begin{tabular}{ c c c }
-            \faEnvelopeO\enspace p.guseva00@gmail.com & \faGithub\enspace \href{https://github.com/no-brainer}{no-brainer} & \faMobile\enspace +7 (905) 588-08-48 \\
+        \begin{tabular}{ c c c c }
+            \faEnvelopeO\enspace \href{mailto:me@ngtvx.space}{me@ngtvx.space} & \faGithub\enspace \href{https://github.com/no-brainer}{no-brainer} & \faLinkedin\enspace \href{https://www.linkedin.com/in/ngtvx}{ngtvx} & \faMobile\enspace +7 (905) 588-08-48 \\
         \end{tabular}
     \end{center}
 
     \section{Education}{
-        \customcventry{2018 -- 2022}{Bachelor of Science in Applied Mathematics and Computer Science. 8.34/10 GPA}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{}{
-            \underline{\normalsize Relevant courses:}
+        \customcventry{2018 -- 2022}{Bachelor of Science in Applied Mathematics and Computer Science. 8.79/10 GPA}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{}{
+            Focus on Machine Learning and Applications.
+
+            \underline{\normalsize Relevant coursework:}
 
             \begin{cvcolumns}
                 \cvcolumn{}{\small
                     \begin{itemize}
                         \item Algorithms and data structures
-                        \item C++ programming
                         \item Computer architecture and operating systems
+                        \item Distributed systems
                     \end{itemize}
                 }
                 \cvcolumn{}{\small
                     \begin{itemize}
-                        \item Linear algebra
-                        \item Python programming
-                        \item Differential equations
+                        \item Applied statistics
+                        \item Probability theory
+                        \item Statistical learning theory
                     \end{itemize}
                 }
             \end{cvcolumns}
@@ -76,75 +100,62 @@
     }
     \vspace{-0.75cm}
     \section{Work experience}{
-        \customcventry{Summer 2019}{Software Engineering Intern}{Yandex}{Moscow, Russia}{}{
+        \customcventry{Jul -- Oct 2019}{Software Engineering Intern}{Yandex}{Moscow, Russia}{}{
             \begin{itemize}
-                \item Built Web API for signing and publishing iOS applications by teaching myself Ruby and Django REST
-                \item Implemented automatic signing of an application with the correct company certificate, bulk uploading to TestFlight, and publishing of fully-tested versions
+                \item Built REST API for signing and publishing iOS applications (about 200 users across company)
+                \item Implemented automatic app signing with the correct company certificate, bulk uploading to TestFlight, and publishing of fully-tested versions using Django, Flask, and Ruby
             \end{itemize}
         }
-        \customcventry{October 2019 -- March 2020}{Teaching Assistant for the Algorithms and the Discrete maths courses}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{
+        \customcventry{Oct 2019 -- Mar 2020}{Teaching assistant for the "Discrete mathematics" courses}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{
             \begin{itemize}
                 \item Mentored over 30 students and led weekly study sessions
-                \item Graded homeworks and reviewed code in thematic contests
+                \item Graded weekly homework
+            \end{itemize}
+        }
+        \customcventry{Mar -- Jul 2020}{Teaching assistant for the MOOC \href{https://www.coursera.org/learn/algdata1}{"Algorithms and Data structures - Part I"}}{National Research University "Higher School of Economics"}{Moscow, Russia}{}{
+            \begin{itemize}
+                \item Created over 25 theoretical problems for various topics
+                \item Tested checkers for practice exercises
             \end{itemize}
         }
     }
     \vspace{-0.25cm}
-    \section{Relevant Projects}{
-        \customcventry{2019 - Now}{An EduTech startup that helps schoolchildren improve soft skills in an engaging way}{Focus}{Moscow, Russia}{}{}{
-            \begin{itemize} \small
-                \item Developed a mobile application for Android and iOS with C\# and Xamarin
-                \item Built a RESTful API for applications with Flask, PostgreSQL, and Amazon S3 and deployed it to Heroku
-                \item Supervised frontend development
-            \end{itemize}
-        }
-        \customcventry{December 2019 - May 2020}{An university project}{Fine motor movements classification}{Moscow, Russia}{}{}{
-            \begin{itemize} \small
-                \item Developed an Android app in Kotlin for data collection and labeling
-                \item Built an Android app in Kotlin for real-time classifying fine motor movements
-                \item Developed movement reconstruction app with Python and Processing
+    \section{Projects}{
+        \projcventry{Research on fine motor movement classification}{\faGithub\enspace\href{https://github.com/no-brainer/fine-motor-movements}{no-brainer/fine-motor-movements}}{
+            \begin{itemize}
+                \item Developed an Android app for data collection and data labelling using Kotlin and Java
+                \item Embedded a trained neural network to an Android app with TensorFlow Lite
             \end{itemize}
         }
     }
     \vspace{-0.25cm}
     \section{Relevant Activities}{
-%        \customcventry{2019 -- 2021}{Selective Data Science and Data Engineering school}{Ozon Masters}{Moscow, Russia}{}{}{
-%            \underline{\normalsize Relevant courses:}
-%
-%            \begin{cvcolumns}
-%                \cvcolumn{}{
-%                    \begin{itemize}
-%                        \item Computational Linear Algebra
-%                        \item Big Data and Data Engineering Basics
-%                    \end{itemize}
-%                }
-%                \cvcolumn{}{
-%                    \begin{itemize}
-%                        \item Machine Learning Basics
-%                    \end{itemize}
-%                }
-%            \end{cvcolumns}
-%        }
-
-        \customcventry{November 2019}{Participant of state-of-the-art scientific research school by Yandex}{Educational Center "Sirius"}{Sochi, Russia}{}{
+        \customcventry{2020}{}{School on software architecture "School of future CTOs"}{Yandex.Cloud}{}{
+            \vspace{-4mm}
+            \begin{itemize}
+                \item Designed a backend server for peer-to-peer video call service
+                \item Developed a prototype with the ability to withhold over 10\,000 calls at a time using Janus WebRTC, Go, and C
+            \end{itemize}
+        }
+        \customcventry{2019}{}{School on replication of state-of-the-art scientific results}{Educational Centre "Sirius"}{}{
+            \vspace{-4mm}
             \begin{itemize}
                 \item Worked on a simplified version of Amazon Aurora database with PostgreSQL compatibility
-                \item Implemented communication between database nodes and caching in C89 with asynchronous programming
+                \item Implemented node communication using C
             \end{itemize}
         }
     }
     \vspace{-0.25cm}
     \section{Key Skills}{
-        \cvitem{Programming Languages}{C++/C/C\#, Python, SQL, Kotlin, Ruby/Rails, Clojure}
-        \cvitem{Frameworks}{Django, Flask, Xamarin}
-        \cvitem{Utilities}{Git, Docker, Heroku}
-        \cvitem{Languages}{Russian (Native), English (Upper Intermediate)}
+        \cvitem{Programming Languages}{C++/C, Go, Python, Kotlin, Java}
+        \cvitem{Technologies}{Git, Docker, Android}
     }
+
     \vspace{-0.25cm}
     \section{Achievements and Awards}{
-        \cvitem{2018}{1st degree award in "Lomonosov" olympiad in Mathematics (over 3000 participants overall)}
-        \cvitem{2018}{Prizewinner of Regional Level of Russian National Olympiad in Informatics}
+        \cvitem{2020}{Winner of 1C's best student project award}
+        \cvitem{2018}{Winner of "Lomonosov" olympiad in mathematics (top 8\%)}
+        \cvitem{2018}{Prizewinner of Regional Level of Russian National Olympiad in Informatics (top 15\%)}
         \cvitem{2017}{1st place in National Technology Initiative Contest in Wireless Networking (over 1000 participants overall)}
-        \cvitem{2017}{Prizewinner of Regional Level of Russian National Olympiad in Mathematics}
     }
 \end{document}
